@@ -8,6 +8,7 @@
   --background-end-rgb: 255, 255, 255;
 }
 
+
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
@@ -24,6 +25,80 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+
+
+    .ant-modal {
+      background-color: #2B2B31 !important;
+    }
+
+    .wallet-modal-title {
+      background-color: #2B2B31 !important;
+      font-size: 24px;
+      color: white;
+      padding: 20px;
+    }
+
+    .ant-menu-item-active {
+      background-color: #000000 !important;
+    }
+
+    .ant-menu-light {
+      background-color: #2B2B31 !important;
+    }
+
+    .ant-modal-content {
+      background-color: #2B2B31 !important;
+      border-radius: 200px;
+    }
+
+    .wallet-button{
+      background-color: #30E3AF;
+      color: black;
+      border: none;
+      border-radius: 15px;
+      font-weight: 500;
+    }
+
+    .ant-btn-default {
+      background-color: #30E3AF !important;
+      color: black !important;
+    }
+
+    .wallet-connect-button {
+      background-color: #30E3AF;
+      color: black;
+      border: none;
+      border-radius: 15px;
+      font-weight: 500;
+    }
+
+    .wallet-connect-button-text {
+      color: black;
+      font-weight: 500;
+  }
+
+    .ant-button-default {
+      background-color: #30E3AF;
+    }
+
+    .ant-menu-item {
+      background-color: #181717;
+      color: white;
+      padding: 15px;
+      height: auto !important;
+      margin-bottom: 10px !important;
+    }
+
+    .wallet-selector-text {
+      font-size: 14px;
+      font-weight: 600;
+      color: white;
+    }
+
+    .wallet-button:hover {
+      background-color: #5872ff; /* 鼠标悬浮时的背景色，这里是一个更亮的蓝色 */
+    }
+
 }
 
 @layer utilities {
