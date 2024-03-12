@@ -48,7 +48,7 @@ const FooterBar = () => {
           />
           <div className="flex-1 flex items-center justify-end space-x-4">
             <a
-              href="/signup"
+              href="/trade"
               className="bg-[#27A750] text-[#FFFFFF] font-bold mt-4 px-5 py-2 rounded-full shadow-lg transition duration-300 ease-in-out hover:bg-[#67e2c2]"
             >
               Trade Now

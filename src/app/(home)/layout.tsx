@@ -1,4 +1,4 @@
-import FooterBar from "./_componets/footer_bar";
+import FooterBar from "./_components/footer_bar";
 
 
 const HomeLayout = ({ children }: { children: React.ReactNode }) => (

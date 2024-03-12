@@ -4,15 +4,9 @@ import { useEffect, useRef } from "react";
 import Marquee from "react-fast-marquee";
 import { Calendar } from "lucide-react";
 import Image from "next/image";
-import { HeroBar } from "./_componets/hero_bar";
+import { HeroBar } from "./_components/hero_bar";
 
 const HomePage = () => {
-  const taglineStyle = {
-    background: "linear-gradient(45deg, #75FBC8, #fff)",
-    WebkitBackgroundClip: "text",
-    WebkitTextFillColor: "transparent",
-  };
-
   const scrollerRef = useRef<HTMLDivElement>(null);
 
   // Effect to handle the auto-scrolling
