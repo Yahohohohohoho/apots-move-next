@@ -84,7 +84,7 @@ const HomePage = () => {
       <div className="flex flex-col overflow-x-clip">
         <HeroBar />
         <div className="h-screen flex flex-col flex-grow items-center justify-center">
-          <div className="flex-grow flex">
+          <div className="flex-grow flex gap-x-20">
             <div className="w-3/4 flex items-center justify-center pl-20 pr-20 py-10">
               {/* Container taking up 4/5th of the width and centering content vertically */}
               <div
@@ -114,14 +114,14 @@ const HomePage = () => {
                   }}
                 >
                   {/* Subtitle with responsive font size and a relaxed line height */}
-                  Simpler Trades, Varied Derivatives, Elevated Yields.
+                  Simpler Trades, Diverse Markets, Elevated Yields.
                 </p>
               </div>
             </div>
             <div className="w-1/4 overflow-auto border-l border-slate-600">
               {/* Adjusted width for right-side content */}
-              <h2 className="text-3xl font-bold mb-4 pl-10 pr-20 pt-24 text-right">
-                NEWS & EVENTS
+              <h2 className="text-3xl font-bold mb-4 pl-10 pr-20 pt-32">
+                NEWS
               </h2>{" "}
               {newsItems.map((news, index) => (
                 <div
