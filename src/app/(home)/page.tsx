@@ -85,7 +85,7 @@ const HomePage = () => {
         <HeroBar />
         <div className="h-screen flex flex-col flex-grow items-center justify-center">
           <div className="flex-grow flex">
-            <div className="w-3/4 flex items-center justify-center pl-20 pr-10 py-10">
+            <div className="w-3/4 flex items-center justify-center pl-20 pr-20 py-10">
               {/* Container taking up 4/5th of the width and centering content vertically */}
               <div
                 className="flex flex-col space-y-12"
@@ -107,15 +107,14 @@ const HomePage = () => {
                   for Degen and Earn
                 </h1>
                 <p
-                  className="text-md lg:text-3xl font-bold
+                  className="text-md lg:text-4xl font-bold
                  text-neutral-100 leading-relaxed"
                   style={{
                     lineHeight: "1.3",
                   }}
                 >
                   {/* Subtitle with responsive font size and a relaxed line height */}
-                  Elevate your Web3 applications with intuitive infrastructure
-                  services. Innovatively embracing the Web3 paradigm shift.
+                  Simpler Trades, Varied Derivatives, Elevated Yields.
                 </p>
               </div>
             </div>
