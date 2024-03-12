@@ -13,10 +13,15 @@
     "@aptos-labs/wallet-adapter-ant-design": "^2.0.0",
     "@okwallet/aptos-wallet-adapter": "^0.0.7",
     "antd": "^5.15.0",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.0",
+    "lucide-react": "^0.356.0",
     "next": "14.1.2",
     "react": "^18",
     "react-dom": "^18",
-    "styled-components": "^6.1.8"
+    "styled-components": "^6.1.8",
+    "tailwind-merge": "^2.2.1",
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "@types/node": "^20",
