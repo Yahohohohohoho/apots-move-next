@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Link from "next/link"
 import { cva } from "class-variance-authority"
 import { Logo } from "@/components/resources/logo";

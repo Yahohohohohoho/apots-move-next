@@ -2,9 +2,10 @@
 
 import { useEffect, useRef } from "react";
 import Marquee from "react-fast-marquee";
-import { Calendar } from "lucide-react";
-import Image from "next/image";
 import { HeroBar } from "./_components/hero_bar";
+import { generateMockOrders } from "./_components/mock_data";
+
+import OrderBook from "./_components/orderbook";
 
 const TradePage = () => {
     const scrollerRef = useRef<HTMLDivElement>(null);
@@ -43,6 +44,17 @@ const TradePage = () => {
         },
     ];
 
+    const handleUseBuyPrice = (price: number, orderId: string) => {
+        console.log(`Use buy price: ${price}, order ID: ${orderId}`);
+    };
+
+    const handleUseSellPrice = (price: number, orderId: string) => {
+        console.log(`Use sell price: ${price}, order ID: ${orderId}`);
+    };
+
+    const askOrders = generateMockOrders(20, false); // 生成 10 个卖单
+    const bidOrders = generateMockOrders(20, true); // 生成 15 个买单
+
     return (
         <div className="w-full">
             <HeroBar></HeroBar>
@@ -50,37 +62,12 @@ const TradePage = () => {
                 <div className="h-screen flex flex-col flex-grow items-center justify-center">
                     <div className="flex-grow flex gap-x-20">
                         <div className="w-3/4 flex items-center justify-center pl-20 pr-20 py-10">
-                            {/* Container taking up 4/5th of the width and centering content vertically */}
-                            <div
-                                className="flex flex-col space-y-12"
-                                style={{ maxWidth: "1000px" }}
-                            >
-                                {/* Flex container with a larger maximum width and increased space between elements */}
-                                <h1
-                                    className="text-[3rem] lg:text-[6rem] font-bold"
-                                    style={{
-                                        background: "linear-gradient(45deg, #75FBC8, #fff)",
-                                        WebkitBackgroundClip: "text",
-                                        WebkitTextFillColor: "transparent",
-                                        lineHeight: "1.3", // Reduced line height for tighter spacing between lines
-                                    }}
-                                >
-                                    {/* Responsive font size, gradient color, and custom line spacing */}
-                                    Trading Booster
-                                    <br />
-                                    for Degen and Earn
-                                </h1>
-                                <p
-                                    className="text-md lg:text-4xl font-bold
-                 text-neutral-100 leading-relaxed"
-                                    style={{
-                                        lineHeight: "1.3",
-                                    }}
-                                >
-                                    {/* Subtitle with responsive font size and a relaxed line height */}
-                                    Simpler Trades, Diverse Markets, Elevated Yields.
-                                </p>
-                            </div>
+                            <OrderBook
+                                askOrders={askOrders}
+                                bidOrders={bidOrders}
+                                onUseBuyPrice={handleUseBuyPrice}
+                                onUseSellPrice={handleUseSellPrice}
+                            />
                         </div>
                         <div className="w-1/4 overflow-auto border-l border-slate-600">
                             {/* Adjusted width for right-side content */}
