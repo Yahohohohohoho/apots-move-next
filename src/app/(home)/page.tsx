@@ -121,7 +121,7 @@ const HomePage = () => {
             </div>
             <div className="w-1/4 overflow-auto border-l border-slate-600">
               {/* Adjusted width for right-side content */}
-              <h2 className="text-3xl font-bold mb-4 pl-10 pr-20 pt-10 text-right">
+              <h2 className="text-3xl font-bold mb-4 pl-10 pr-20 pt-24 text-right">
                 NEWS & EVENTS
               </h2>{" "}
               {newsItems.map((news, index) => (
