@@ -2,6 +2,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+
 import "@aptos-labs/wallet-adapter-ant-design/dist/index.css";
 import { ThemeProvider } from "@/providers/theme-provider";
 
