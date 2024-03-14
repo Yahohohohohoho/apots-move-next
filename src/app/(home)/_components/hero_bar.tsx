@@ -127,7 +127,6 @@ export const HeroBar = () => {
     >
       <div className="fixed left-1/4 right-1/4 bg-white/20 py-5 px-6 rounded-3xl shadow-2xl backdrop-blur-xl">
         <nav className="flex items-center justify-between">
-
           <div className="flex-1 flex items-center justify-center">
             <NavigationMenu>
               <NavigationMenuList>

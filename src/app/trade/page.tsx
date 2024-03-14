@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 import Marquee from "react-fast-marquee";
 import { HeroBar } from "./_components/hero_bar";
+import SubBar from "./_components/sub_bar";
 import { generateMockOrders } from "./_components/mock_data";
 
 import OrderBook from "./_components/orderbook";
@@ -57,7 +58,8 @@ const TradePage = () => {
 
     return (
         <div className="w-full">
-            <HeroBar></HeroBar>
+            <HeroBar />
+            <SubBar />
             <div className="flex flex-col overflow-x-clip">
                 <div className="h-screen flex flex-col flex-grow items-center justify-center">
                     <div className="flex-grow flex gap-x-20">

@@ -60,13 +60,6 @@ export const HeroBar = () => {
     },
   ]
 
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
-
   const ListItem = React.forwardRef<
     React.ElementRef<"a">,
     React.ComponentPropsWithoutRef<"a">
@@ -95,16 +88,37 @@ export const HeroBar = () => {
 
   return (
     <div
-      className="fixed top-0 left-0 right-0 text-white z-50"
+      className="top-0 left-0 right-0 text-white z-50"
       style={{ padding: "0px" }}
     >
-      <div className="fixed left-1/4 right-1/4 bg-white/20 py-5 px-6 rounded-3xl shadow-2xl backdrop-blur-xl">
+      <div className="w-full bg-background py-2 px-16 shadow-2xl backdrop-blur-xl">
         <nav className="flex items-center justify-between">
-          <div className="flex-1 flex items-center justify-center">
+          <Link href="/" legacyBehavior>
+            <a className="text-white font-bold text-2xl cursor-pointer">
+              <Logo />
+            </a>
+          </Link>
+          <div className="pl-8 flex items-center justify-center">
             <NavigationMenu>
               <NavigationMenuList>
                 <NavigationMenuItem>
                   <NavigationMenuTrigger className="bg-white bg-opacity-0 ">Trade</NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+                      {navComponents.map((component) => (
+                        <ListItem
+                          key={component.title}
+                          title={component.title}
+                          href={component.href}
+                        >
+                          {component.description}
+                        </ListItem>
+                      ))}
+                    </ul>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger className="bg-white bg-opacity-0 ">Earn</NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
                       {navComponents.map((component) => (
@@ -130,20 +144,15 @@ export const HeroBar = () => {
             </NavigationMenu>
           </div>
 
-          <div className="flex-1 flex items-center justify-center">
-            <a
-              onClick={scrollToTop}
-              className="text-white font-bold text-2xl cursor-pointer"
-            >
-              <Logo />
-            </a>
-          </div>
+          {/* <div className="flex-1 flex items-center justify-center">
+            
+          </div> */}
           <div className="flex-1 flex items-center justify-end space-x-4">
             <a
               href="/trade"
               className="bg-[#27A750] text-white font-bold px-5 py-2 rounded-full shadow-lg transition duration-300 ease-in-out hover:bg-[#67e2c2]"
             >
-              Trade Now
+              Connect Wallet
             </a>
           </div>
         </nav>

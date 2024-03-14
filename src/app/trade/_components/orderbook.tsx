@@ -99,11 +99,11 @@ const OrderBook: React.FC<OrderBookProps> = ({ askOrders = [], bidOrders = [], o
                 <TooltipProvider>
                     <Tooltip>
                         <TooltipTrigger className="inline-flex items-center">
-                            <span className={`text-lg ${marketPrice ? 'text-green-500' : 'text-zinc-500'}`}>
+                            <span className={`text-2xl font-bold ${marketPrice ? 'text-green-500' : 'text-zinc-500'}`}>
                                 {marketPrice ? `${prettyBalance(marketPrice)}` : '-'}
                             </span>
                             {showFiat && fiatRate && marketPrice && (
-                                <span className="text-xs text-zinc-500 pl-2">${calcFiatPrice(marketPrice, fiatRate)}</span>
+                                <span className="text-sm text-zinc-500 pl-2">${calcFiatPrice(marketPrice, fiatRate)}</span>
                             )}
                         </TooltipTrigger>
                         <TooltipContent>Market Price</TooltipContent>
