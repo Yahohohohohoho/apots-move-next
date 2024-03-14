@@ -1,13 +1,14 @@
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
 
 export default function SubBar() {
     const tabs = [
-        { value: "tab1", label: "Swap" },
-        { value: "tab2", label: "Orderbook" },
-        { value: "tab3", label: "OTC" },
-        { value: "tab4", label: "DCA" },
-        { value: "tab5", label: "Perpetual" },
+        { value: "swap", label: "Swap" },
+        { value: "orderbook", label: "Orderbook" },
+        { value: "otc", label: "OTC" },
+        { value: "dca", label: "DCA" },
+        { value: "perpetual", label: "Perpetual" },
     ];
 
     return (
@@ -19,18 +20,19 @@ export default function SubBar() {
                 >
                     <TabsList className="flex bg-background justify-center">
                         {tabs.map((tab) => (
-                            <TabsTrigger
-                                key={tab.value}
-                                value={tab.value}
-                                className={cn(
-                                    "px-6 py-3 text-base font-medium text-white hover:text-white/80 focus:outline-none",
-                                    "border-b border-transparent hover:border-white/80 focus:bg-transparent rounded-none",
-                                    "data-[state=active]:border-white",
-                                    "active:outline-none active:ring-0"
-                                )}
-                            >
-                                {tab.label}
-                            </TabsTrigger>
+                            <Link key={tab.value} href={`/trade/${tab.value}`}>
+                                <TabsTrigger
+                                    value={tab.value}
+                                    className={cn(
+                                        "px-6 py-3 text-base font-medium text-white hover:text-white/80 focus:outline-none",
+                                        "border-b border-transparent hover:border-white/80 focus:bg-transparent rounded-none",
+                                        "data-[state=active]:border-white",
+                                        "active:outline-none active:ring-0"
+                                    )}
+                                >
+                                    {tab.label}
+                                </TabsTrigger>
+                            </Link>
                         ))}
                     </TabsList>
                 </Tabs>
