@@ -150,7 +150,7 @@ export const HeroBar = () => {
           <div className="flex-1 flex items-center justify-end space-x-4">
             <a
               href="/trade"
-              className="bg-[#27A750] text-white font-bold px-5 py-2 rounded-full shadow-lg transition duration-300 ease-in-out hover:bg-[#67e2c2]"
+              className="bg-[#27A750] text-white font-bold px-5 py-2 rounded-lg shadow-lg transition duration-300 ease-in-out hover:bg-[#67e2c2]"
             >
               Connect Wallet
             </a>

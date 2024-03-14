@@ -137,7 +137,7 @@ const HomePage = () => {
                   <div className="flex-1 min-w-0 pl-3 flex flex-col justify-center">
                     {" "}
                     {/* Added flex column container with centered content */}
-                    <h3 className="text-xl font-semibold text-white truncate">
+                    <h3 className="text-xl font-semibold text-foreground truncate">
                       {news.title}
                     </h3>
                     <div className="flex items-center justify-between mt-1">
